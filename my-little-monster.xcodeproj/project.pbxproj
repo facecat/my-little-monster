@@ -17,6 +17,8 @@
 		9268FC7C1C20669000E08A7A /* heart.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9268FC771C20669000E08A7A /* heart.wav */; };
 		9268FC7D1C20669000E08A7A /* skull.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9268FC781C20669000E08A7A /* skull.wav */; };
 		9268FC7E1C20669000E08A7A /* cave-music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9268FC791C20669000E08A7A /* cave-music.mp3 */; };
+		9268FC811C206E7200E08A7A /* MonsterImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9268FC801C206E7200E08A7A /* MonsterImageView.swift */; };
+		9268FC841C2076D800E08A7A /* DragImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9268FC831C2076D800E08A7A /* DragImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		9268FC771C20669000E08A7A /* heart.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = heart.wav; sourceTree = "<group>"; };
 		9268FC781C20669000E08A7A /* skull.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = skull.wav; sourceTree = "<group>"; };
 		9268FC791C20669000E08A7A /* cave-music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "cave-music.mp3"; sourceTree = "<group>"; };
+		9268FC801C206E7200E08A7A /* MonsterImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterImageView.swift; sourceTree = "<group>"; };
+		9268FC831C2076D800E08A7A /* DragImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DragImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +71,8 @@
 				9268FC651C20664B00E08A7A /* ViewController.swift */,
 				9268FC671C20664B00E08A7A /* Main.storyboard */,
 				9268FC6C1C20664B00E08A7A /* LaunchScreen.storyboard */,
+				9268FC801C206E7200E08A7A /* MonsterImageView.swift */,
+				9268FC831C2076D800E08A7A /* DragImageView.swift */,
 				9268FC7F1C20669C00E08A7A /* Support Files */,
 			);
 			path = "my-little-monster";
@@ -164,7 +170,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9268FC811C206E7200E08A7A /* MonsterImageView.swift in Sources */,
 				9268FC661C20664B00E08A7A /* ViewController.swift in Sources */,
+				9268FC841C2076D800E08A7A /* DragImageView.swift in Sources */,
 				9268FC641C20664B00E08A7A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -313,6 +321,7 @@
 				9268FC741C20664B00E08A7A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

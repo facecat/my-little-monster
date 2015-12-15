@@ -10,6 +10,11 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var monsterImg: MonsterImageView!
+    @IBOutlet weak var heartImg: DragImageView!
+    @IBOutlet weak var foodImg: DragImageView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
