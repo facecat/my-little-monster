@@ -12,6 +12,11 @@
 		9268FC691C20664B00E08A7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9268FC671C20664B00E08A7A /* Main.storyboard */; };
 		9268FC6B1C20664B00E08A7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9268FC6A1C20664B00E08A7A /* Assets.xcassets */; };
 		9268FC6E1C20664B00E08A7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9268FC6C1C20664B00E08A7A /* LaunchScreen.storyboard */; };
+		9268FC7A1C20669000E08A7A /* bite.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9268FC751C20669000E08A7A /* bite.wav */; };
+		9268FC7B1C20669000E08A7A /* death.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9268FC761C20669000E08A7A /* death.wav */; };
+		9268FC7C1C20669000E08A7A /* heart.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9268FC771C20669000E08A7A /* heart.wav */; };
+		9268FC7D1C20669000E08A7A /* skull.wav in Resources */ = {isa = PBXBuildFile; fileRef = 9268FC781C20669000E08A7A /* skull.wav */; };
+		9268FC7E1C20669000E08A7A /* cave-music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9268FC791C20669000E08A7A /* cave-music.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		9268FC6A1C20664B00E08A7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9268FC6D1C20664B00E08A7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9268FC6F1C20664B00E08A7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9268FC751C20669000E08A7A /* bite.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bite.wav; sourceTree = "<group>"; };
+		9268FC761C20669000E08A7A /* death.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = death.wav; sourceTree = "<group>"; };
+		9268FC771C20669000E08A7A /* heart.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = heart.wav; sourceTree = "<group>"; };
+		9268FC781C20669000E08A7A /* skull.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = skull.wav; sourceTree = "<group>"; };
+		9268FC791C20669000E08A7A /* cave-music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "cave-music.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +64,27 @@
 		9268FC621C20664B00E08A7A /* my-little-monster */ = {
 			isa = PBXGroup;
 			children = (
-				9268FC631C20664B00E08A7A /* AppDelegate.swift */,
 				9268FC651C20664B00E08A7A /* ViewController.swift */,
 				9268FC671C20664B00E08A7A /* Main.storyboard */,
-				9268FC6A1C20664B00E08A7A /* Assets.xcassets */,
 				9268FC6C1C20664B00E08A7A /* LaunchScreen.storyboard */,
-				9268FC6F1C20664B00E08A7A /* Info.plist */,
+				9268FC7F1C20669C00E08A7A /* Support Files */,
 			);
 			path = "my-little-monster";
+			sourceTree = "<group>";
+		};
+		9268FC7F1C20669C00E08A7A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9268FC631C20664B00E08A7A /* AppDelegate.swift */,
+				9268FC6A1C20664B00E08A7A /* Assets.xcassets */,
+				9268FC6F1C20664B00E08A7A /* Info.plist */,
+				9268FC751C20669000E08A7A /* bite.wav */,
+				9268FC761C20669000E08A7A /* death.wav */,
+				9268FC771C20669000E08A7A /* heart.wav */,
+				9268FC781C20669000E08A7A /* skull.wav */,
+				9268FC791C20669000E08A7A /* cave-music.mp3 */,
+			);
+			name = "Support Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +146,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9268FC7B1C20669000E08A7A /* death.wav in Resources */,
+				9268FC7E1C20669000E08A7A /* cave-music.mp3 in Resources */,
+				9268FC7C1C20669000E08A7A /* heart.wav in Resources */,
+				9268FC7D1C20669000E08A7A /* skull.wav in Resources */,
+				9268FC7A1C20669000E08A7A /* bite.wav in Resources */,
 				9268FC6E1C20664B00E08A7A /* LaunchScreen.storyboard in Resources */,
 				9268FC6B1C20664B00E08A7A /* Assets.xcassets in Resources */,
 				9268FC691C20664B00E08A7A /* Main.storyboard in Resources */,
