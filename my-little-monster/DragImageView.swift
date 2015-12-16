@@ -25,6 +25,7 @@ class DragImageView: UIImageView {
     //MARK: Touch events
     
     var originPosition: CGPoint!
+    var dropTarget: UIView?
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
             originPosition = CGPointMake(self.center.x, self.center.y)
@@ -40,6 +41,15 @@ class DragImageView: UIImageView {
     }
     
     override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+
+        if let touch = touches.first, let target = dropTarget {
+            let position = touch.locationInView(self.superview)
+            
+            if CGRectContainsPoint(target.frame, position) {
+                NSNotificationCenter.defaultCenter().postNotification(NSNotification(name: "onTargetDropped", object: nil))
+            }
+        }
+        
         self.center = originPosition
     }
     

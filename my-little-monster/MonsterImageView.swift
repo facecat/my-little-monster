@@ -23,6 +23,8 @@ class MonsterImageView: UIImageView {
     
     func startImgAnimate() {
         
+        self.image = UIImage(named: "idle1")
+        
         var images = [UIImage]()
         
         for i in 1...4 {
@@ -35,7 +37,23 @@ class MonsterImageView: UIImageView {
         self.animationRepeatCount = 0
         self.startAnimating()
     }
+    
+    func startDeathAnimate() {
+        
+        self.image = UIImage(named: "dead5")
 
+        var images = [UIImage]()
+        
+        for i in 1...5 {
+            let img = UIImage(named: "dead\(i)")
+            images.append(img!)
+        }
+        
+        self.animationImages = images
+        self.animationDuration = 1.0
+        self.animationRepeatCount = 1
+        self.startAnimating()
+    }
     
     
     
