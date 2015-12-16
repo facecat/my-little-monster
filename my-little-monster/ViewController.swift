@@ -18,6 +18,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var skullImg1: UIImageView!
     @IBOutlet weak var skullImg2: UIImageView!
     @IBOutlet weak var skullImg3: UIImageView!
+    @IBOutlet weak var bigHeadSelectBtn: UIButton!
+    @IBOutlet weak var smallHeadSelectBtn: UIButton!
     
     //MARK: Constant
     let OPAQUE: CGFloat = 1.0
@@ -39,20 +41,20 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        skullImg1.alpha = MID_ALPHA
-        skullImg2.alpha = MID_ALPHA
-        skullImg3.alpha = MID_ALPHA
-        setupSound()
-
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "dropItemOnMonster:", name: "onTargetDropped", object: nil)
-        
+
+        setupSound()
+        setupImages()
+        }
+    
+    //MARK: Function
+    func startGame() {
         heartImg.dropTarget = monsterImg
         foodImg.dropTarget = monsterImg
-        
+
         startTimer()
     }
     
-    //MARK: function
     func setupSound() {
         //background music
         do {
@@ -75,6 +77,15 @@ class ViewController: UIViewController {
             print(err.debugDescription)
         }
         
+    }
+    
+    func setupImages() {
+        skullImg1.alpha = MID_ALPHA
+        skullImg2.alpha = MID_ALPHA
+        skullImg3.alpha = MID_ALPHA
+        
+//        foodImg.hidden = true
+//        heartImg.hidden = true
     }
     
     func startTimer() {
@@ -167,7 +178,33 @@ class ViewController: UIViewController {
         isMonsterHappy = false
     }
     
+    func cleanUpStartOption() {
+        bigHeadSelectBtn.hidden = true
+        bigHeadSelectBtn.userInteractionEnabled = false
+        smallHeadSelectBtn.hidden = true
+        smallHeadSelectBtn.userInteractionEnabled = false
+        
+        monsterImg.hidden = false
+        heartImg.hidden = false
+        foodImg.hidden = false
+    }
     
+    //MARK: Action
+    @IBAction func onBigHeadSelectBtnPressed(sender: UIButton!) {
+        monsterImg.bigHeadMonsterChosen()
+        
+        cleanUpStartOption()
+        
+        startGame()
+    }
+    
+    @IBAction func onSmallHeadSelectedBtnPressed(sender: UIButton!) {
+        monsterImg.smallHeadMonsterChosen()
+        
+        cleanUpStartOption()
+        
+        startGame()
+    }
     
 
 }

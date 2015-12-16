@@ -18,20 +18,50 @@ class MonsterImageView: UIImageView {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         
+    }
+    
+    //MARK: Property
+    enum monsterStyle {
+        case bigHeadMonster
+        case smallHeadMonster
+    }
+
+    var monsterChosen = monsterStyle.smallHeadMonster
+    
+    //MARK: Function
+    
+    func bigHeadMonsterChosen() {
+        monsterChosen = monsterStyle.bigHeadMonster
+
         startImgAnimate()
     }
     
+    func smallHeadMonsterChosen() {
+        monsterChosen = monsterStyle.smallHeadMonster
+
+        startImgAnimate()
+    }
+    
+    //Animation
     func startImgAnimate() {
-        
-        self.image = UIImage(named: "idle1")
-        
         var images = [UIImage]()
-        
-        for i in 1...4 {
-            let img = UIImage(named: "idle\(i)")
-            images.append(img!)
+
+        if monsterChosen == monsterStyle.smallHeadMonster {
+            self.image = UIImage(named: "idle1")
+            
+            for i in 1...4 {
+                let img = UIImage(named: "idle\(i)")
+                images.append(img!)
+            }
+        } else if monsterChosen == monsterStyle.bigHeadMonster {
+            self.image = UIImage(named: "idle (1)")
+            
+            for i in 1...4 {
+                let img = UIImage(named: "idle (\(i))")
+                images.append(img!)
+            }
         }
-        
+
         self.animationImages = images
         self.animationDuration = 0.8
         self.animationRepeatCount = 0
@@ -39,14 +69,24 @@ class MonsterImageView: UIImageView {
     }
     
     func startDeathAnimate() {
-        
-        self.image = UIImage(named: "dead5")
-
         var images = [UIImage]()
-        
-        for i in 1...5 {
-            let img = UIImage(named: "dead\(i)")
-            images.append(img!)
+
+        if monsterChosen == monsterStyle.smallHeadMonster {
+            
+            self.image = UIImage(named: "dead5")
+            
+            for i in 1...5 {
+                let img = UIImage(named: "dead\(i)")
+                images.append(img!)
+            }
+        } else if monsterChosen == monsterStyle.bigHeadMonster {
+            
+            self.image = UIImage(named: "dead (5)")
+            
+            for i in 1...5 {
+                let img = UIImage(named: "dead (\(i))")
+                images.append(img!)
+            }
         }
         
         self.animationImages = images
