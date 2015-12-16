@@ -84,8 +84,8 @@ class ViewController: UIViewController {
         skullImg2.alpha = MID_ALPHA
         skullImg3.alpha = MID_ALPHA
         
-//        foodImg.hidden = true
-//        heartImg.hidden = true
+        foodImg.hidden = true
+        heartImg.hidden = true
     }
     
     func startTimer() {
